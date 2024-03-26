@@ -20,6 +20,7 @@ import com.tommyhumaxcar.myaa.controller.SetRank;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = AppInfo.APP + "MainActivity";
+
     LinearLayout mMainLayout = null;
     Context mContext = this;
     View.OnClickListener defaultButtonClicked = new View.OnClickListener() {
@@ -60,9 +61,11 @@ public class MainActivity extends AppCompatActivity {
         // Header
         addTextView("Test button", UiStyle.STYLE_2, UiStyle.LAYOUT_STYLE_2);
         // Test button
-        addButton("Send Noti", NotiSender.getInstance().onButtonClick(),
+        addButton("Normal Noti", NotiSender.getInstance().onButtonClick(),
                 UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
-        addButton("Set Rank", SetRank.getInstance().onButtonClick(),
+        addButton("Lock Phone", SetRank.getInstance().onButtonLockClick(),
+                UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
+        addButton("UnLock itself", SetRank.getInstance().onButtonUnLockClick(),
                 UiStyle.STYLE_1, UiStyle.LAYOUT_STYLE_1);
 
         // Header

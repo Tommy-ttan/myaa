@@ -53,6 +53,7 @@ public class NotiSender {
         builder.setSmallIcon(AppInfo.APP_ICON);
         builder.setContentTitle(AppInfo.APP_TITLE);
         builder.setContentText(AppInfo.APP_TEXT);
+//        builder.setPriority();
 
         notificationManager.notify(1, builder.build());
     }
